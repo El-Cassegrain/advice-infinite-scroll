@@ -38,12 +38,12 @@ const handleIntersect = entries => {
         }, 2800)
 
         /* Prevent bug on chrome */
-        const isChrome = (navigator.userAgent.indexOf("Chrome") != -1 && navigator.vendor.indexOf("Google Inc") != -1)
-        if (isChrome) {
-            if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
-                   scrollY === window.innerHeight / 2
-            }
-        }
+        // const isChrome = (navigator.userAgent.indexOf("Chrome") != -1 && navigator.vendor.indexOf("Google Inc") != -1)
+        // if (isChrome) {
+        //     if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+        //            scrollY === window.innerHeight / 2
+        //     }
+        // }
     }
 }
 
