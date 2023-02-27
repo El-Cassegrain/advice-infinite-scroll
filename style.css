@@ -1,0 +1,163 @@
+/* Main style */
+
+/* Small reset */
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #06040c;
+    --text-color: #eae6ff;
+    --pink: rgb(243, 118, 139);
+}
+
+html {
+    scrollbar-width: none;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    height: 200vh;
+    font-family: "Manrope", sans-serif;
+    scrollbar-width: none;
+}
+
+/* body::-webkit-scrollbar {
+    display: none;
+} */
+
+.container {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+section#random-advice {
+    max-width: 680px;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    display: inline-flex;
+    text-align: center;
+    position: relative;
+    /* margin: 0 20px; */
+    font-size: 2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transform: translateY(65px) rotate(6deg);
+    animation: appear ease 1s forwards;
+    opacity: 0;
+}
+
+p#id {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-bottom: 42px;
+    color: var(--pink)
+}
+
+.arrow-down-wrapper {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arrow-down-wrapper svg {
+    fill: pink;
+    width: 22px;
+    animation: bounce ease-in-out 2.45s infinite;
+}
+
+#overlay {
+    width: 130vw;
+    height: 100vh;
+    background-color: rgb(222, 37, 37);
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+#overlay.translate {
+    transform: translateX(-100%);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    width: 32vh;
+    transition: all ease-in-out 2s;
+}
+
+
+.intersection-watcher {
+    position: absolute;
+    top: 101vh;
+    left: 0;
+    width: 100%;
+    background-color: pink;
+    height: 100vh;
+    transform: translateY(0);
+}
+
+.intersection-watcher.margin-top {
+    margin-top: 100vh;
+}
+
+.intersection-watcher.translate {
+    animation: translate ease 2.4s forwards;
+}
+
+@keyframes translate {
+    to {
+        transform: translateY(-200%);
+        visibility: hidden;
+    }
+}
+
+@keyframes appear {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    25% {
+        transform: translateY(12px);
+        opacity: 0.65;
+    }
+
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateY(12px);
+        opacity: 0.65;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
