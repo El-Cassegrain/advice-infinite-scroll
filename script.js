@@ -23,6 +23,8 @@ const watcher = document.querySelector('.intersection-watcher')
 const handleIntersect = entries => {
     if (entries[0].isIntersecting) {
         console.log('isIntersecting')
+        
+        /* If in another browser */
         overlay.classList.add('translate')
         watcher.classList.add('translate')
 
@@ -32,18 +34,12 @@ const handleIntersect = entries => {
         }, 800)
 
         setTimeout(() => {
+            /* If in another browser */
             overlay.classList.remove('translate')
             watcher.classList.remove('translate')
             watcher.classList.add('margin-top')
+            
         }, 2800)
-
-        /* Prevent bug on chrome */
-        // const isChrome = (navigator.userAgent.indexOf("Chrome") != -1 && navigator.vendor.indexOf("Google Inc") != -1)
-        // if (isChrome) {
-        //     if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
-        //            scrollY === window.innerHeight / 2
-        //     }
-        // }
     }
 }
 

@@ -27,14 +27,18 @@ body {
     scrollbar-width: none;
 }
 
-/* body::-webkit-scrollbar {
+body::-webkit-scrollbar {
     display: none;
-} */
+}
 
 .container {
     height: 100vh;
     width: 100%;
     overflow: hidden;
+    position: relative;
+}
+
+main {
     position: relative;
 }
 
@@ -118,13 +122,17 @@ p#id {
 }
 
 .intersection-watcher.translate {
-    animation: translate ease 2.4s forwards;
+    animation: translate ease 2.3s forwards;
+}
+
+.intersection-watcher.chrome {
+    top: calc(100vh + 10%);
+    animation: translate ease 2.3s forwards;
 }
 
 @keyframes translate {
     to {
-        transform: translateY(-200%);
-        visibility: hidden;
+        transform: translateY(-205%);
     }
 }
 
