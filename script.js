@@ -24,7 +24,7 @@ const handleIntersect = entries => {
     if (entries[0].isIntersecting) {
         console.log('isIntersecting')
         
-        /* If in another browser */
+
         overlay.classList.add('translate')
         watcher.classList.add('translate')
 
@@ -34,7 +34,7 @@ const handleIntersect = entries => {
         }, 800)
 
         setTimeout(() => {
-            /* If in another browser */
+
             overlay.classList.remove('translate')
             watcher.classList.remove('translate')
             watcher.classList.add('margin-top')
