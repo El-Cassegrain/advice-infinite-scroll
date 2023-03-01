@@ -1,4 +1,3 @@
-# Advice-API-infinite-scroll
-Work with advice API with infinite scroll
+# Advice API Infinite Scroll
 
-#Actually trying to finding out WHY ? my project is okay with Firefox but not on Chrome ?
+Use the Advice split API in a small app that show a random advice when the user scroll down.
