@@ -1,5 +1,5 @@
 # Advice Infinite Scroll
-
+![screenshot](https://github.com/El-Cassegrain/advice-infinite-scroll/screenshot.jpg)
 Un petit projet front-end pour charger des conseils (“advice”) de façon infinie (infinite scroll) à partir d’une API.
 
 ---
